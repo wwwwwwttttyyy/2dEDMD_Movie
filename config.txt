@@ -1,0 +1,31 @@
+# =============================================================
+#  EDMD 2D 模拟参数控制文件
+# =============================================================
+
+# ---- 随机数种子 ----
+seed = 1
+
+# ---- 模拟时间 ----
+maxtime          = 10000       # 模拟总时
+writeinterval    = 100.0       # 屏幕/压力输出间隔
+
+# ---- 轨迹输出 ----
+makesnapshots    = 1          # 是否写轨迹文件
+snapshotinterval = 1000     # 轨迹快照间隔
+
+# ---- 初始构型 ----
+initialconfig    = 0           # 0=从文件读取，1=正方晶格
+inputfilename    = config1_vf_0.750.dat    # 输入文件名（initialconfig=0 时使用）
+packfrac         = 0.72        # 填充率（initialconfig=1 时使用）
+N                = 4096        # 粒子数（initialconfig=1，自动调整为完全平方数）
+
+# ---- 事件列表调参 ----
+maxscheduletime         = 1.0  # 线性链表覆盖的时间范围
+eventlisttimemultiplier = 1.0  
+
+# ---- 邻居列表壳层 ----
+shellsize = 1.5                # 推荐 1.2 ~ 2.0
+
+# ---- Andersen 热浴 ----
+usethermostat      = 1         # 热浴开关
+thermostatinterval = 0.01      # 热浴触发间隔
